@@ -111,13 +111,14 @@ class SelfLearningAgent(base_agent.BaseAgent):
                 formatted_case[0] = state0_case
                 formatted_case[1] = state1_case
 
+        # generate a picture of the NN target (debug)
         # for x, y in zip(player_y, player_x):
         #     pos_x = min(round(int(x) / 4), 15)
         #     pos_y = min(round(int(y) / 4), 15)
         #     im_array[pos_x][pos_y] = 255
         # im = scipy.misc.toimage(im_array, high=255.0, low=0.0)
         # im = scipy.misc.imresize(im, (256, 256), interp='nearest')
-        # scipy.misc.imsave('outfile.jpg', im)
+        # scipy.misc.imsave('outfile.png', im)
         # time.sleep(1)
 
         self.model.fit(x=formatted_state,
